@@ -1,8 +1,13 @@
 import { component$ } from "@qwik.dev/core";
-import { Link, type DocumentHead } from "@qwik.dev/router";
+import type { DocumentHead } from "@qwik.dev/router";
+import { Carousel } from "../../components/carousel";
 
 export default component$(() => {
-  return <Link href="/csr-route">CSR Route</Link>;
+  return (
+    <Carousel.Root data-testid="root">
+      <Carousel.Title>Carousel Title</Carousel.Title>
+    </Carousel.Root>
+  );
 });
 
 export const head: DocumentHead = {
